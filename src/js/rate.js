@@ -8,7 +8,7 @@ window.onload = ()=> {
     rating.addEventListener('click', (e)=> {
       e.stopPropagation();
 
-      doAjaxCall('Rated...')
+      doAjaxCall('Rated...').then(d=> {console.log(d[ 0 ])});
 
       const li = e.target;
       const selectedValue = li.dataset.value;
@@ -28,7 +28,9 @@ window.onload = ()=> {
 };
 
 function doAjaxCall (...data) {
-  setTimeout(()=> {
-    console.log(data);
-  }, 2000);
+  return new Promise((success)=> {
+    setTimeout(()=> {
+      success(data);
+    }, 1000);
+  })
 }
