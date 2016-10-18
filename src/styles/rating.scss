@@ -1,0 +1,27 @@
+.rating {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &:hover {
+    > .rating-item {
+      background-position: 0 0;
+    }
+  }
+  .rating-item {
+    display: block;
+    background: url("../images/stars.png") no-repeat -18px 0;
+    width: 18px;
+    height: 18px;
+    float: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    &:hover{
+      ~ li{
+        background-position: -18px 0;
+      }
+    }
+    &.rate {
+      background-position: 0 0;
+    }
+  }
+}
