@@ -2,6 +2,8 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  display: block;
+  clear: both;
   &:hover {
     > .rating-item {
       background-position: 0 0;
