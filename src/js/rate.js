@@ -1,4 +1,7 @@
 import '../styles/rating.scss';
+import './ex'
+
+
 
 window.onload = ()=> {
   let className = 'rating-item';

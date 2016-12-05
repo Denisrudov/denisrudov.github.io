@@ -37,7 +37,8 @@ module.exports = {
     extractSass,
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    }),
+    })
+    ,
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         unsafe: true,
